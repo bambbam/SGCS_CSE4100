@@ -4,6 +4,8 @@
 # proj3
 sic/xe machine 구현
 
+proj2에서 예외처리 안해서 10점 까임
+
 # proj4
 phase1 : base shell 구현
 
@@ -11,9 +13,13 @@ phase2 : pipelining 구현
 
 phase3 : background, foreground 구현. exception handling
 
+(120/120)
+
 # proj5
 concurrent한 주식서버 구현
 
 phase1 : event driven server
 
 phase2 : thread base server
+
+(100/100)
