@@ -1,0 +1,20 @@
+***컴파일 및 실행 방법**
+make
+./20171687.out
+프로그램의 실행을 마쳤을 경우 
+make clean
+
+**executable command**
+h[elp]
+d[ir]
+q[uit]
+hi[story]
+du[mp] [start, end]
+e[dit] address, value
+f[ill] start, end, value
+reset
+opcode mnemonic
+opcodelist
+assemble filename
+type filename
+symbol
