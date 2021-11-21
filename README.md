@@ -1,25 +1,38 @@
 # SGCS_CSE4100
 서강대학교 시스템 프로그래밍
 
-# proj3
-sic/xe machine 구현
+# proj3 sic/xe machine 구현
 
-proj2에서 예외처리 안해서 10점 까임
+SIC는 Simplified Instructional Computer로, 매우 단순화된 컴퓨터구조입니다. 이를 c언어로 구현하면서, 시스템에 필요한 어셈블러, 링커, 로더 등을 직접 구현해보았습니다.
 
-# proj4
-phase1 : base shell 구현
+우리가 작성한 프로그램이 어떤 과정을 거쳐 시스템 메모리에 올라가는지 직접 구현해봄으로써 확실하게 알 수 있는 좋은 기회였습니다.
 
-phase2 : pipelining 구현
+# proj4 shell 구현
 
-phase3 : background, foreground 구현. exception handling
+쉘은 유닉스 시스템을 이용하기 위한 인터페이스를 제공합니다.
 
-(120/120)
+제가 만든 쉘은 다음과 같은 기능을 제공합니다.
+
+- 멀티 프로세스
+
+쉘에서 어떤 프로그램을 실행했을 때, 그 프로그램은 새로운 프로세스 위에 fork한 후 이용해야합니다.
+
+- 파이프라인 지원
+
+쉘에서 제공하는 파이프라인 기능을 제공하기 위해서는 각 프로그램을 띄운 프로세스간 통신이 가능해야합니다. 이를 위해 파이프라인을 만들어 서로 통신이 가능하도록 해줬습니다.
+
+- fg, bg지원
+
+어떤 프로세스는 foregroud로, 어떤 프로세스는 background로 돌릴 수 있어야합니다.
+
+- 여러 시그널 지원
+
+프로세스가 죽었을때, 또는 백그라운드에서 돌고 있던 프로세스가 할일을 마쳤을 때, 쉘에 시그널을 줘야하며, 쉘은 그 시그널을 받아 적절한 처리가 가능해야합니다.
+
+가장 구현이 어려웠던 것은 파이썬 인터프리터와 같이 유저의 input을 새로운 프로세스에 할당해주고, 그 프로세스가 끝났을 때 다른 프로세스에게 넘겨주는 과정의 예외를 발견하고, 그것을 해결하는 과정이었습니다.
 
 # proj5
-concurrent한 주식서버 구현
 
-phase1 : event driven server
+여러 서버 프레임워크는 여러 유저와 통신하기 위해 event based server 또는 multithread server와 같은 방법을 사용합니다.
 
-phase2 : thread base server
-
-(100/100)
+제 머릿속에서 NodeJs로 대표되는 EventBasedServer와 Spring으로 대표되는 MultiThread Server를 직접 구현해보고, 이것이 실제로 어떻게 동작하는지 살펴볼 수 있는 계기가 되었습니다.
