@@ -1,5 +1,5 @@
 # SGCS_CSE4100
-서강대학교 시스템 프로그래밍
+시스템 프로그래밍
 
 # proj3 sic/xe machine 구현
 
